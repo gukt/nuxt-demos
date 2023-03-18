@@ -5,15 +5,17 @@ export default defineNuxtConfig({
   runtimeConfig: {
     // The private keys which are only available server-side
     // 没有写在 public 下的配置只能在服务端可用，不会暴露给客户端
-    apiSecret: "123456",
+    apiSecret: "123",
     // Keys within public are also exposed client-side
     // 写在 public 下的配置会暴露给客户端
     public: {
       apiBase: "/api",
       content: {
         anchorLinks: {
+          // 测试显示锚点深度为 0，同时忽略 H1 锚点
           depth: 6,
-          exclude: [0],
+          // exclude 默认值是 1， 表示 H1 不要渲染为锚点链接
+          // exclude: [],
         },
       },
     },
@@ -43,7 +45,7 @@ export default defineNuxtConfig({
               _id: "content:data:foo.json",
             },
           ],
-          without: ['_']
+          without: ["_"],
         },
         bar: {
           where: [
