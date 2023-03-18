@@ -1,0 +1,4 @@
+layout: article
+foo: foo
+bar: bars
+description: "你在 globas 里看到我了吗？那是因为我被配置在 nuxt.config 的 documentDriven 的全局查询里了。"
