@@ -20,8 +20,18 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ["@nuxt/content"],
   components: true,
+  modules: [
+    "@nuxt/content",
+    // https://nuxt.com/modules/tailwindcss
+    "@nuxtjs/tailwindcss",
+    // https://nuxt.com/modules/headlessui
+    "nuxt-headlessui",
+  ],
+  // Optionally change the default prefix.
+  headlessui: {
+    prefix: "Headless",
+  },
   content: {
     // 最简单的启动 documentDriven 的方式是设置该字段为 true
     // documentDriven: true,

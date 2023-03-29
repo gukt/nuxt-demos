@@ -3,6 +3,10 @@
     {
       "filePath": "node_modules/@nuxt",
       "group": "Default"
+    },
+    {
+      "filePath": "node_modules/nuxt",
+      "group": "Default"
     }
   ]
 }
